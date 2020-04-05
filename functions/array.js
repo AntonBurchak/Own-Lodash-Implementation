@@ -7,12 +7,18 @@
     View my github portfolio :: https://github.com/AntonBurchak
 
     Progress:
-    1/324 Solved
+    2/324 Solved
 
     last update: 05.04.2020
 
     READ: This .js file has inside only array functions
 */
+
+
+
+
+
+
 
 // [X] Solved
 const chunk = (array = [], size = 1) => { 
@@ -38,13 +44,27 @@ const chunk = (array = [], size = 1) => {
 }
 // Input:  ['a', 'b', 'c', 'd', 22, 224], 2
 // Output: [ [ 'a', 'b' ], [ 'c', 'd' ], [ 22, 224 ] ]
-// console.log(chunk(['a', 'b', 'c', 'd', 22, 224], 2))
 
 
+// [X] Solved
 const compact = (array) => {
     const config = [false, null, 0, "", undefined, NaN] // falsey types
     return array.filter(element => config.indexOf(element) == -1 ? true : false);
 }
 // Input:  [0, 1, false, 2, '', 3]
 // Output: [ 1, 2, 3 ]
-// console.log(compact([0, 1, false, 2, '', 3]))
+
+
+// [X] Solved
+function concat()  {
+    const args = Array.from(arguments);
+    const temp = args[0];
+    // console.log(args);
+    for (let i = 1; i < args.length; i++) {
+        if(typeof args[i] == 'Array') console.log(args[i]);
+        
+    }
+}
+// Input:  [0, 1, false, 2, '', 3]
+// Output: [ 1, 2, 3 ]
+concat([1,2,3], 4, [5]);
