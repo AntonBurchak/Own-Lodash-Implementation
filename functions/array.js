@@ -7,7 +7,7 @@
     View my github portfolio :: https://github.com/AntonBurchak
 
     Progress:
-    4/324 Solved
+    6/324 Solved
 
     last update: 05.04.2020
 
@@ -82,5 +82,18 @@ const difference = (inspect_array, exclude_array) => {
 // Input:  [2, 3, 19, 21, 4], [2, 3, 99, 19, 21]
 // Output: [4]
 
-// [2, 1] [2, 3] => [1]
-console.log(difference([2, 3, 19, 21, 4], [2, 3, 99, 19, 21]))
+
+// [X] Solved
+const drop = (array, n) => {
+   return array.length > n ? array.slice(n, array.length) : [];
+}
+// Input:  [1, 2, 3, 4, 5, 6], 5
+// Output: [6]
+
+// [X] Solved
+const dropRight = (array, n) => {
+   return array.length > n ? array.slice(0, array.length - n) : [];
+ }
+// Input:  [1,2,3], 2
+// Output: [1]
+ 
