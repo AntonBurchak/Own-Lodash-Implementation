@@ -7,7 +7,7 @@
     View my github portfolio :: https://github.com/AntonBurchak
 
     Progress:
-    2/324 Solved
+    4/324 Solved
 
     last update: 05.04.2020
 
@@ -61,10 +61,26 @@ function concat()  {
     const temp = args[0];
     // console.log(args);
     for (let i = 1; i < args.length; i++) {
-        if(typeof args[i] == 'Array') console.log(args[i]);
+        if(typeof args[i] === 'object' && args[0] !== undefined) { 
+            temp.push(...args[i]);
+        } else {
+            temp.push(args[i]);
+        }
         
     }
+    return temp
 }
-// Input:  [0, 1, false, 2, '', 3]
-// Output: [ 1, 2, 3 ]
-concat([1,2,3], 4, [5]);
+// Input:  [1,2,3], 2, [3], [[4]]
+// Output: [ 1, 2, 3, 4, 5, [ 6 ] ]
+
+// [X] Solved
+const difference = (inspect_array, exclude_array) => {
+    return inspect_array.filter(element => {
+        return !exclude_array.some(item => item == element);
+    });
+}
+// Input:  [2, 3, 19, 21, 4], [2, 3, 99, 19, 21]
+// Output: [4]
+
+// [2, 1] [2, 3] => [1]
+console.log(difference([2, 3, 19, 21, 4], [2, 3, 99, 19, 21]))
